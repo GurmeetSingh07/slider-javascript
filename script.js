@@ -16,7 +16,7 @@ function mySlide(param) {
     i++;
     arr.push(i);
 
-    if (i === images.length) {
+    if (i === images.length - 1) {
       i = images.length - 1;
       document.getElementById("rmright").style.visibility = "hidden";
     } else if (i == 1) {
@@ -27,7 +27,9 @@ function mySlide(param) {
     arr.push(i);
     if (i < 0) {
       i = 0;
-    } else if (i < 5) {
+    } else if (i == 0) {
+      document.getElementById("rmLeft").style.visibility = "hidden";
+    } else if (i < 4) {
       document.getElementById("rmright").style.visibility = "visible";
     }
   }
@@ -45,6 +47,19 @@ function font() {
     "underline";
 
   document.getElementById(`dot-${arr[oldIndex]}`).style.textDecoration = "none";
+}
+
+function jump(num) {
+  i = num;
+  arr.push(i);
+  if (i == 1) {
+    document.getElementById("rmLeft").style.visibility = "visible";
+  } else if (i == 0) {
+    document.getElementById("rmLeft").style.visibility = "hidden";
+  }
+
+  document.getElementById("slide").src = images[i];
+  font();
 }
 
 mySlide(i);

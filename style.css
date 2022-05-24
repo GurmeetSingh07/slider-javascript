@@ -39,3 +39,6 @@ ul {
 li {
   margin-left: 5px;
 }
+ul li a {
+  text-decoration: none;
+}
