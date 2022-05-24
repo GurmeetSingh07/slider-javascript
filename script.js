@@ -56,8 +56,11 @@ function jump(num) {
     document.getElementById("rmLeft").style.visibility = "visible";
   } else if (i == 0) {
     document.getElementById("rmLeft").style.visibility = "hidden";
+  } else if (i == 3) {
+    document.getElementById("rmright").style.visibility = "hidden";
+  } else if (i > 4) {
+    document.getElementById("rmLeft").style.visibility = "visible";
   }
-
   document.getElementById("slide").src = images[i];
   font();
 }
