@@ -52,14 +52,17 @@ function font() {
 function jump(num) {
   i = num;
   arr.push(i);
-  if (i == 1) {
+  console.log(i + "hiihh");
+  if (i > 0) {
     document.getElementById("rmLeft").style.visibility = "visible";
   } else if (i == 0) {
     document.getElementById("rmLeft").style.visibility = "hidden";
-  } else if (i == 3) {
+  }
+  if (i == 3) {
     document.getElementById("rmright").style.visibility = "hidden";
-  } else if (i > 4) {
-    document.getElementById("rmLeft").style.visibility = "visible";
+  }
+  if (i < 3) {
+    document.getElementById("rmright").style.visibility = "visible";
   }
   document.getElementById("slide").src = images[i];
   font();
