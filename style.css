@@ -1,0 +1,41 @@
+div {
+  background-color: #95a5a6;
+  width: 400px;
+  overflow: hidden;
+  margin: 50px auto;
+  padding: 20px;
+}
+img {
+  border: 2px solid #fff;
+}
+
+div button:first-of-type {
+  float: left;
+}
+div button:last-of-type {
+  float: right;
+}
+
+button {
+  background-color: #fff;
+  color: #27ae60;
+  border: 2px solid #27ae60;
+  font-size: 20px;
+  font-weight: bold;
+  width: 50px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: 130px;
+}
+.activeDot {
+  text-decoration: underline;
+}
+li {
+  margin-left: 5px;
+}
